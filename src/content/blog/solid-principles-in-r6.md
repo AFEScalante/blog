@@ -27,11 +27,11 @@ Here, we will explore object-oriented programming (OOP) and the SOLID principles
 
 By overcoming these challenges, R programmers can benefit from cleaner, more modular, and maintainable code structures. 🙂
 
-## OOP paradigm in R
+## OOP paradigm in R 🔄
 
 From Hadley Wickham's [Advanced R](https://adv-r.hadley.nz/) book:
 
-> There are two main paradigms of object-oriented programming which differ in how methods and classes are related. In this book, we’ll borrow the terminology of Extending R61 and call these paradigms encapsulated and functional:
+> There are two main paradigms of object-oriented programming which differ in how methods and classes are related. In this book, we’ll borrow the terminology from the **Extending R** book and call these paradigms encapsulated and functional:
 
 > In **functional OOP**, methods belong to generic functions, and method calls look like ordinary function calls: `generic(object, arg2, arg3)`. This is called functional because from the outside it looks like a regular function call, and internally the components are also functions.
 
@@ -65,7 +65,7 @@ Person <- R6Class(
 )
 ```
 
-In this example, we define an R6 class called `Person` with a `name` field and a `greet` method. The `initialize` method is a special method that is called when a new object is created.
+In this example, we define a class called `Person` with a `name` field and a `greet` method. The `initialize` method is a special method that is called when a new object is created.
 
 R6 classes can be inherited, which allows you to create a hierarchy of classes with shared behavior.
 
@@ -89,7 +89,7 @@ Employee <- R6Class(
 
 In this example, we define a subclass of `Person` called `Employee` with a `title` field and an `introduce` method. The `initialize` method calls the `initialize` method of the superclass (`Person`) using the `super` keyword. This allows us to reuse the behavior of the superclass while adding new behavior in the subclass.
 
-## What are the SOLID principles?
+## What are the SOLID principles? 🤔
 
 The SOLID principles are a set of five design principles that help developers create maintainable and scalable software. The principles were introduced by Robert C. Martin in the early 2000s and have since become a cornerstone of object-oriented design.
 
@@ -105,7 +105,7 @@ The SOLID principles are:
 
 The Single Responsibility Principle (SRP) states that a class should have only one reason to change. In other words, a class should have only one responsibility or job. This principle helps to keep classes small and focused, making them easier to understand and maintain.
 
-Let's see how we can apply the SRP to an R6 class:
+Let's see how we can apply this:
 
 ```r
 # Bad Example
@@ -495,4 +495,9 @@ In this example, we create a `CommissionStrategy` class with a `calculate_commis
 
 Understanding the SOLID principles is essential for writing maintainable and scalable code in R. By following these principles, you can create classes that are easier to understand, modify, and extend. The examples in this post demonstrate how the SOLID principles can be applied to R6 classes, but they can be applied to any object-oriented programming language.
 
-I hope this post has helped you understand the SOLID principles and how they can be applied to R6 classes. If you have any questions or comments, feel free to leave them below. Thanks for reading! 🚀
+I hope this post has helped you understand the SOLID principles in the R context. Thanks for reading! 🚀
+
+## References
+
+- [R6: Encapsulated classes with reference semantics](https://adv-r.hadley.nz/r6.html)
+- [A Solid Guide to SOLID Principles](https://www.baeldung.com/solid-principles)
